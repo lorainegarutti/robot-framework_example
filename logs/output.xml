@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.8.3 on win32)" generated="20200628 15:39:56.492" rpa="false">
-<suite id="s1" name="Tests" source="C:\projetos\squads\poc-robot\aplicacao\tests">
-<suite id="s1-s1" name="Valid Login" source="C:\projetos\squads\poc-robot\aplicacao\tests\valid_login.robot">
-<test id="s1-s1-t1" name="Cenário: fazer pesquisa de vídeo sobre café especial">
-<kw name="Começando teste" library="variables" type="setup">
+<robot generator="Robot 3.2.1 (Python 3.8.4rc1 on win32)" generated="20200722 18:16:34.863" rpa="false">
+<suite id="s1" name="Tests" source="C:\Users\lorai\projetos\robot-framework_example\tests">
+<suite id="s1-s1" name="Valid Login" source="C:\Users\lorai\projetos\robot-framework_example\tests\valid_login.robot">
+<test id="s1-s1-t1" name="Cenário 01: fazer pesquisa de vídeo sobre café especial">
+<kw name="Começando teste" library="variables">
 <kw name="Open Application" library="AppiumLibrary">
 <doc>Opens a new application to given Appium server.
 Capabilities of appium server, Android and iOS,
@@ -21,9 +21,20 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>appActivity=${APP_ACTIVITY}</arg>
 <arg>automationName=${AUTOMATION_NAME}</arg>
 </arguments>
-<status status="PASS" starttime="20200628 15:39:57.786" endtime="20200628 15:40:23.812"></status>
+<status status="PASS" starttime="20200722 18:16:35.101" endtime="20200722 18:16:42.031"></status>
 </kw>
-<status status="PASS" starttime="20200628 15:39:57.785" endtime="20200628 15:40:23.821"></status>
+<status status="PASS" starttime="20200722 18:16:35.101" endtime="20200722 18:16:42.031"></status>
+</kw>
+<kw name="Ir para a aba Explorar" library="variables">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>accessibility_id=Explore</arg>
+</arguments>
+<msg timestamp="20200722 18:16:42.034" level="INFO">Clicking element 'accessibility_id=Explore'.</msg>
+<status status="PASS" starttime="20200722 18:16:42.032" endtime="20200722 18:16:45.012"></status>
+</kw>
+<status status="PASS" starttime="20200722 18:16:42.032" endtime="20200722 18:16:45.012"></status>
 </kw>
 <kw name="Abrir campo de busca" library="variables">
 <kw name="Click Element" library="AppiumLibrary">
@@ -31,10 +42,10 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>accessibility_id=Search</arg>
 </arguments>
-<msg timestamp="20200628 15:40:23.875" level="INFO">Clicking element 'accessibility_id=Search'.</msg>
-<status status="PASS" starttime="20200628 15:40:23.865" endtime="20200628 15:40:26.163"></status>
+<msg timestamp="20200722 18:16:45.018" level="INFO">Clicking element 'accessibility_id=Search'.</msg>
+<status status="PASS" starttime="20200722 18:16:45.016" endtime="20200722 18:16:46.021"></status>
 </kw>
-<status status="PASS" starttime="20200628 15:40:23.850" endtime="20200628 15:40:26.167"></status>
+<status status="PASS" starttime="20200722 18:16:45.014" endtime="20200722 18:16:46.021"></status>
 </kw>
 <kw name="Digitar as palavras" library="variables">
 <arguments>
@@ -43,13 +54,13 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <kw name="Input Text" library="AppiumLibrary">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
-<arg>com.google.android.youtube:id/search_edit_text</arg>
+<arg>id=com.google.android.youtube:id/search_edit_text</arg>
 <arg>${ARGUMENTO}</arg>
 </arguments>
-<msg timestamp="20200628 15:40:26.193" level="INFO">Typing text 'café especial' into text field 'com.google.android.youtube:id/search_edit_text'</msg>
-<status status="PASS" starttime="20200628 15:40:26.186" endtime="20200628 15:40:29.506"></status>
+<msg timestamp="20200722 18:16:46.025" level="INFO">Typing text 'café especial' into text field 'id=com.google.android.youtube:id/search_edit_text'</msg>
+<status status="PASS" starttime="20200722 18:16:46.022" endtime="20200722 18:16:47.982"></status>
 </kw>
-<status status="PASS" starttime="20200628 15:40:26.181" endtime="20200628 15:40:29.511"></status>
+<status status="PASS" starttime="20200722 18:16:46.022" endtime="20200722 18:16:47.982"></status>
 </kw>
 <kw name="Clicar na tecla &quot;Enter&quot;" library="variables">
 <kw name="Press Keycode" library="AppiumLibrary">
@@ -57,9 +68,9 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>66</arg>
 </arguments>
-<status status="PASS" starttime="20200628 15:40:29.528" endtime="20200628 15:40:31.264"></status>
+<status status="PASS" starttime="20200722 18:16:47.983" endtime="20200722 18:16:49.012"></status>
 </kw>
-<status status="PASS" starttime="20200628 15:40:29.525" endtime="20200628 15:40:31.264"></status>
+<status status="PASS" starttime="20200722 18:16:47.983" endtime="20200722 18:16:49.012"></status>
 </kw>
 <kw name="Verei pelo menos um resultado com a palavra chave" library="variables">
 <arguments>
@@ -70,40 +81,58 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>${ARGUMENTO}</arg>
 </arguments>
-<msg timestamp="20200628 15:40:33.583" level="INFO">Current page contains text 'café especial'.</msg>
-<status status="PASS" starttime="20200628 15:40:31.272" endtime="20200628 15:40:33.584"></status>
+<msg timestamp="20200722 18:16:49.832" level="INFO">Current page contains text 'café especial'.</msg>
+<status status="PASS" starttime="20200722 18:16:49.014" endtime="20200722 18:16:49.832"></status>
 </kw>
-<status status="PASS" starttime="20200628 15:40:31.266" endtime="20200628 15:40:33.584"></status>
+<status status="PASS" starttime="20200722 18:16:49.013" endtime="20200722 18:16:49.832"></status>
 </kw>
-<kw name="Finalizando teste" library="variables" type="teardown">
+<status status="PASS" starttime="20200722 18:16:35.100" endtime="20200722 18:16:49.833" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="Cenário 02: dar play no segundo vídeo exibido no resultado da pesquisa">
+<kw name="Abrir o segundo vídeo" library="variables">
+<kw name="Swipe" library="AppiumLibrary">
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<arguments>
+<arg>100</arg>
+<arg>700</arg>
+<arg>100</arg>
+<arg>1000</arg>
+</arguments>
+<status status="PASS" starttime="20200722 18:16:49.835" endtime="20200722 18:16:51.300"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>accessibility_id=Entenda de uma vez por todas o que é café especial, café gourmet, café superior e café tradicional - 8 minutes, 13 seconds - Go to channel - Coffee and Joy - 9.5K views - 1 year ago - play video</arg>
+</arguments>
+<msg timestamp="20200722 18:16:51.301" level="INFO">Clicking element 'accessibility_id=Entenda de uma vez por todas o que é café especial, café gourmet, café superior e café tradicional - 8 minutes, 13 seconds - Go to channel - Coffee and Joy - 9.5K views - 1 year ago - play video'.</msg>
 <kw name="Capture Page Screenshot" library="AppiumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20200628 15:40:36.307" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20200628 15:40:33.921" endtime="20200628 15:40:36.307"></status>
+<msg timestamp="20200722 18:16:51.832" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200722 18:16:51.331" endtime="20200722 18:16:51.832"></status>
 </kw>
-<kw name="Close Application" library="AppiumLibrary">
-<doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" starttime="20200628 15:40:36.308" endtime="20200628 15:40:40.243"></status>
+<msg timestamp="20200722 18:16:51.833" level="FAIL">ValueError: Element locator 'accessibility_id=Entenda de uma vez por todas o que é café especial, café gourmet, café superior e café tradicional - 8 minutes, 13 seconds - Go to channel - Coffee and Joy - 9.5K views - 1 year ago - play video' did not match any elements.</msg>
+<status status="FAIL" starttime="20200722 18:16:51.300" endtime="20200722 18:16:51.833"></status>
 </kw>
-<status status="PASS" starttime="20200628 15:40:33.813" endtime="20200628 15:40:40.245"></status>
+<status status="FAIL" starttime="20200722 18:16:49.835" endtime="20200722 18:16:51.834"></status>
 </kw>
-<status status="PASS" starttime="20200628 15:39:57.784" endtime="20200628 15:40:40.266" critical="yes"></status>
+<status status="FAIL" starttime="20200722 18:16:49.834" endtime="20200722 18:16:51.834" critical="yes">ValueError: Element locator 'accessibility_id=Entenda de uma vez por todas o que é café especial, café gourmet, café superior e café tradicional - 8 minutes, 13 seconds - Go to channel - Coffee and Joy - 9.5K views - 1 year ago - play video' did not match any elements.</status>
 </test>
-<doc>O usuário informa CPF e senha para fazer login no app Jau-Serve</doc>
-<status status="PASS" starttime="20200628 15:39:56.767" endtime="20200628 15:40:40.417"></status>
+<doc>O usuário procura por vídeos no app do YouTube com o termo 'café especial'</doc>
+<status status="FAIL" starttime="20200722 18:16:34.892" endtime="20200722 18:16:51.836"></status>
 </suite>
-<status status="PASS" starttime="20200628 15:39:56.498" endtime="20200628 15:40:40.453"></status>
+<status status="FAIL" starttime="20200722 18:16:34.864" endtime="20200722 18:16:51.839"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat pass="1" fail="1">Critical Tests</stat>
+<stat pass="1" fail="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="Tests">Tests</stat>
-<stat pass="1" fail="0" id="s1-s1" name="Valid Login">Tests.Valid Login</stat>
+<stat pass="1" fail="1" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="1" id="s1-s1" name="Valid Login">Tests.Valid Login</stat>
 </suite>
 </statistics>
 <errors>
